@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Taller2
 {
+    
     public partial class AgregarCliente : Form
     {
         public AgregarCliente()
@@ -19,17 +20,15 @@ namespace Taller2
             InitializeComponent();
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO Cliente(codigo, ciudad, nombre, pais, tipo) VALUES (@codigo, @ciudad, @nombre, @pais, @tipo);";
+            string query = "INSERT INTO Cliente(ciudad, nombre, pais, tipo) VALUES (@ciudad, @nombre, @pais, @tipo);";
             MySqlParameter[] parameters =
             {
-                new MySqlParameter("@codigo", codigoText.Text),
                 new MySqlParameter("@ciudad", ciudadText.Text),
                 new MySqlParameter("@nombre", nombreText.Text),
                 new MySqlParameter("@pais", paisText.Text),
-                new MySqlParameter("@tipo", VerificarExtranjero())
+                new MySqlParameter("@tipo", VerificarNacionalidad())
             };
 
             ConnectMySQL.Instance.ExecuteQuery(query, parameters);
@@ -39,19 +38,21 @@ namespace Taller2
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             paisText.Visible = checkBox1.Checked;
+            paisText.ResetText();
             paisLabel.Visible = checkBox1.Checked;
             codigoLabel.Visible = !checkBox1.Checked;
             codigoText.Visible = !checkBox1.Checked;
+            codigoText.ResetText();
         }
 
-        private string VerificarExtranjero()
+        private string VerificarNacionalidad()
         {
             if(checkBox1.Checked == true)
             {
                 return "Extranjero";
             }
             return "Nacional";
- 
         }
+  
     }
 }
