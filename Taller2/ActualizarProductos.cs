@@ -19,6 +19,8 @@ namespace Taller2
 
         private void ActualizarProductos_Load(object sender, EventArgs e){
 
+            //faltan cosas aca
+            
             string query = "SELECT nombre  FROM producto";
             DataTable dt = ConnectMySQL.Instance.SelectQuery(query);
             for (int i = 0; i < dt.Rows.Count; i++)
