@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarProductos.Designer.cs">
+      <DependentUpon>ActualizarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActualizarProductos.resx">
+      <DependentUpon>ActualizarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>

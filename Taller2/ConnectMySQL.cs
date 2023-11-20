@@ -32,7 +32,7 @@ namespace Taller2
             server = "localhost";
             database = "Taller2";
             username = "root";
-            password = "LegoSQL";
+            password = "NOPnopo03";
 
             string connectionString = $"SERVER={server};DATABASE={database};UID={username};PASSWORD={password};";
 
