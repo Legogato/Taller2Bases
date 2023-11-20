@@ -25,15 +25,5 @@ namespace Taller2
             // Mostrar el segundo formulario
             agregarProductos.Show();
         }
-
-        private void botonActualizar_Click(object sender, EventArgs e)
-        {
-
-            ActualizarProductos actualizar = new ActualizarProductos();
-
-            actualizar.Show();
-
-        }
-
     }
 }
