@@ -23,5 +23,12 @@ namespace Taller2
 
             cliente.Show();
         }
+
+        private void botonActualizarCliente_Click(object sender, EventArgs e)
+        {
+            ActualizarCiudad actualizarCiudad = new ActualizarCiudad();
+
+            actualizarCiudad.Show();
+        }
     }
 }

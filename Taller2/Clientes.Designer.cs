@@ -29,23 +29,35 @@
         private void InitializeComponent()
         {
             this.AgregarCliente = new System.Windows.Forms.Button();
+            this.botonActualizarCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AgregarCliente
             // 
-            this.AgregarCliente.Location = new System.Drawing.Point(110, 171);
+            this.AgregarCliente.Location = new System.Drawing.Point(62, 171);
             this.AgregarCliente.Name = "AgregarCliente";
-            this.AgregarCliente.Size = new System.Drawing.Size(112, 55);
+            this.AgregarCliente.Size = new System.Drawing.Size(149, 81);
             this.AgregarCliente.TabIndex = 0;
-            this.AgregarCliente.Text = "AgregarCliente";
+            this.AgregarCliente.Text = "Agregar Cliente";
             this.AgregarCliente.UseVisualStyleBackColor = true;
             this.AgregarCliente.Click += new System.EventHandler(this.AgregarCliente_Click);
+            // 
+            // botonActualizarCliente
+            // 
+            this.botonActualizarCliente.Location = new System.Drawing.Point(338, 171);
+            this.botonActualizarCliente.Name = "botonActualizarCliente";
+            this.botonActualizarCliente.Size = new System.Drawing.Size(146, 81);
+            this.botonActualizarCliente.TabIndex = 1;
+            this.botonActualizarCliente.Text = "Actualizar Ciudad";
+            this.botonActualizarCliente.UseVisualStyleBackColor = true;
+            this.botonActualizarCliente.Click += new System.EventHandler(this.botonActualizarCliente_Click);
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonActualizarCliente);
             this.Controls.Add(this.AgregarCliente);
             this.Name = "Clientes";
             this.Text = "Clientes";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button AgregarCliente;
+        private System.Windows.Forms.Button botonActualizarCliente;
     }
 }

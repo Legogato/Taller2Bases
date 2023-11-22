@@ -19,21 +19,25 @@ namespace Taller2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del segundo formulario
+      
             AgregarProductos agregarProductos = new AgregarProductos();
-
-            // Mostrar el segundo formulario
             agregarProductos.Show();
+
         }
 
         private void botonActualizar_Click(object sender, EventArgs e)
         {
 
             ActualizarProductos actualizar = new ActualizarProductos();
-
             actualizar.Show();
 
         }
 
+        private void botonEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarProducto eliminarProducto = new EliminarProducto();
+            eliminarProducto.Show();
+
+        }
     }
 }

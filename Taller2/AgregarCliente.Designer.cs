@@ -37,12 +37,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.codigoLabel = new System.Windows.Forms.Label();
-            this.paisLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // crearClienteButton
             // 
-            this.crearClienteButton.Location = new System.Drawing.Point(335, 298);
+            this.crearClienteButton.Location = new System.Drawing.Point(325, 301);
             this.crearClienteButton.Name = "crearClienteButton";
             this.crearClienteButton.Size = new System.Drawing.Size(90, 35);
             this.crearClienteButton.TabIndex = 0;
@@ -52,37 +52,38 @@
             // 
             // nombreText
             // 
-            this.nombreText.Location = new System.Drawing.Point(67, 148);
+            this.nombreText.Location = new System.Drawing.Point(118, 181);
             this.nombreText.Name = "nombreText";
             this.nombreText.Size = new System.Drawing.Size(100, 20);
             this.nombreText.TabIndex = 1;
             // 
             // ciudadText
             // 
-            this.ciudadText.Location = new System.Drawing.Point(195, 148);
+            this.ciudadText.Location = new System.Drawing.Point(325, 179);
             this.ciudadText.Name = "ciudadText";
             this.ciudadText.Size = new System.Drawing.Size(100, 20);
             this.ciudadText.TabIndex = 2;
             // 
             // codigoText
             // 
-            this.codigoText.Location = new System.Drawing.Point(325, 148);
+            this.codigoText.Location = new System.Drawing.Point(572, 125);
             this.codigoText.Name = "codigoText";
             this.codigoText.Size = new System.Drawing.Size(100, 20);
             this.codigoText.TabIndex = 3;
             // 
             // paisText
             // 
-            this.paisText.Location = new System.Drawing.Point(181, 220);
+            this.paisText.Enabled = false;
+            this.paisText.Location = new System.Drawing.Point(572, 225);
             this.paisText.Name = "paisText";
             this.paisText.Size = new System.Drawing.Size(100, 20);
             this.paisText.TabIndex = 4;
-            this.paisText.Visible = false;
+            this.paisText.TextChanged += new System.EventHandler(this.paisText_TextChanged);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(94, 222);
+            this.checkBox1.Location = new System.Drawing.Point(484, 183);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(73, 17);
             this.checkBox1.TabIndex = 6;
@@ -93,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 132);
+            this.label1.Location = new System.Drawing.Point(145, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 7;
@@ -102,37 +103,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(217, 132);
+            this.label2.Location = new System.Drawing.Point(355, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "ciudad";
+            this.label2.Text = "Ciudad";
             // 
             // codigoLabel
             // 
             this.codigoLabel.AutoSize = true;
-            this.codigoLabel.Location = new System.Drawing.Point(377, 132);
+            this.codigoLabel.Location = new System.Drawing.Point(603, 109);
             this.codigoLabel.Name = "codigoLabel";
             this.codigoLabel.Size = new System.Drawing.Size(40, 13);
             this.codigoLabel.TabIndex = 9;
             this.codigoLabel.Text = "Codigo";
             // 
-            // paisLabel
+            // label3
             // 
-            this.paisLabel.AutoSize = true;
-            this.paisLabel.Location = new System.Drawing.Point(217, 204);
-            this.paisLabel.Name = "paisLabel";
-            this.paisLabel.Size = new System.Drawing.Size(27, 13);
-            this.paisLabel.TabIndex = 10;
-            this.paisLabel.Text = "Pais";
-            this.paisLabel.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(610, 209);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Pais";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // AgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.paisLabel);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.codigoLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -160,6 +161,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label codigoLabel;
-        private System.Windows.Forms.Label paisLabel;
+        private System.Windows.Forms.Label label3;
     }
 }

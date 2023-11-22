@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarCiudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarCiudad.Designer.cs">
+      <DependentUpon>ActualizarCiudad.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectMySQL.cs" />
+    <Compile Include="EliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarProducto.Designer.cs">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActualizarCiudad.resx">
+      <DependentUpon>ActualizarCiudad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActualizarProductos.resx">
       <DependentUpon>ActualizarProductos.cs</DependentUpon>
     </EmbeddedResource>

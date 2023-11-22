@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,28 +18,50 @@ namespace Taller2
             InitializeComponent();
         }
 
-        private void ActualizarProductos_Load(object sender, EventArgs e){
+        private void ActualizarProductos_Load(object sender, EventArgs e)
+        {
 
-            string query = "SELECT nombre  FROM producto";
+            //Combo box
+
+            string query = "SELECT codigo FROM producto WHERE activo = 1";
             DataTable dt = ConnectMySQL.Instance.SelectQuery(query);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                comboBox1.Items.Add(dt.Rows[i]["nombre"]);
+                comboBox1.Items.Add(dt.Rows[i]["codigo"]);
             }
 
-            string consulta = "SELECT * FROM producto";
-            DataTable tabla = ConnectMySQL.Instance.SelectQuery(consulta);
-            TablaProductos.DataSource = tabla;
-        }
-
-        private void TablaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            string consulta = "SELECT nombre, stock, precio FROM producto WHERE Codigo = @Codigo";
+            string[] parametros = { "@Codigo", comboBox1.Text};
+
+            DataTable resultados = ConnectMySQL.Instance.SelectQuery(consulta, parametros);
+
+            string nombre = resultados.Rows[0]["nombre"].ToString();
+            string stock = resultados.Rows[0]["stock"].ToString();
+            string precio = resultados.Rows[0]["precio"].ToString();
+
+            textBoxNombre.Text = nombre;
+            textBoxStock.Text = stock;
+            textBoxPrecio.Text = precio;
+
+        }
+
+        private void botonActualizar_Click(object sender, EventArgs e)
+        {
+
+            string consulta = "UPDATE producto SET precio = @nuevoPrecio WHERE codigo = @Codigo";
+            MySqlParameter[] parameters =
+            {
+                new MySqlParameter("@nuevoPrecio", textBoxPrecio.Text),
+                new MySqlParameter("@Codigo", comboBox1.Text)
+            };
+
+            ConnectMySQL.Instance.ExecuteQuery(consulta, parameters);
+            MessageBox.Show("El precio se acutalizó con exito");
+
         }
     }
 }

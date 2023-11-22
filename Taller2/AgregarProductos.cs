@@ -22,13 +22,14 @@ namespace Taller2
         private void button2_Click(object sender, EventArgs e)
         {
 
-            string query = "INSERT INTO Producto(codigo, stock, nombre, precio) VALUES (@codigo, @stock, @nombre, @precio)";
+            string query = "INSERT INTO Producto(codigo, stock, nombre, precio, activo) VALUES (@codigo, @stock, @nombre, @precio, @activo)";
             MySqlParameter[] parameters =
             {
                 new MySqlParameter("@codigo", textBox4.Text),
                 new MySqlParameter("@stock", textBox5.Text),
                 new MySqlParameter("@nombre", textBox6.Text),
-                new MySqlParameter("@precio", textBox7.Text)
+                new MySqlParameter("@precio", textBox7.Text),
+                new MySqlParameter("@activo", 1)
             };
 
             ConnectMySQL.Instance.ExecuteQuery(query, parameters);
@@ -40,5 +41,6 @@ namespace Taller2
         {
 
         }
+
     }
 }

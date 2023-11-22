@@ -44,7 +44,7 @@
             // 
             // BotonClientes
             // 
-            this.BotonClientes.Location = new System.Drawing.Point(312, 185);
+            this.BotonClientes.Location = new System.Drawing.Point(338, 189);
             this.BotonClientes.Name = "BotonClientes";
             this.BotonClientes.Size = new System.Drawing.Size(177, 80);
             this.BotonClientes.TabIndex = 1;
