@@ -129,17 +129,41 @@
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectMySQL.cs" />
+    <Compile Include="EliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCliente.Designer.cs">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EliminarProducto.Designer.cs">
       <DependentUpon>EliminarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstadisticasProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadisticasProductos.Designer.cs">
+      <DependentUpon>EstadisticasProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoClientes.Designer.cs">
+      <DependentUpon>ListadoClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Password.cs">
       <SubType>Form</SubType>
@@ -176,11 +200,23 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCliente.resx">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarProducto.resx">
       <DependentUpon>EliminarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticasProductos.resx">
+      <DependentUpon>EstadisticasProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoClientes.resx">
+      <DependentUpon>ListadoClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Password.resx">
       <DependentUpon>Password.cs</DependentUpon>

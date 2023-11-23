@@ -66,12 +66,16 @@
             // 
             // botonEstadisticas
             // 
-            this.botonEstadisticas.Location = new System.Drawing.Point(570, 298);
+            this.botonEstadisticas.Location = new System.Drawing.Point(565, 298);
             this.botonEstadisticas.Name = "botonEstadisticas";
             this.botonEstadisticas.Size = new System.Drawing.Size(177, 80);
             this.botonEstadisticas.TabIndex = 3;
             this.botonEstadisticas.Text = "Estadisticas";
             this.botonEstadisticas.UseVisualStyleBackColor = true;
+<<<<<<< Updated upstream
+=======
+            this.botonEstadisticas.Click += new System.EventHandler(this.botonEstadisticas_Click);
+>>>>>>> Stashed changes
             // 
             // Home
             // 

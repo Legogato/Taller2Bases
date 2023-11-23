@@ -20,35 +20,32 @@ namespace Taller2
 
         private void BotonEliminarCliente_Click(object sender, EventArgs e)
         {
-            string consulta = "UPDATE producto SET activo = 0 WHERE codigo = @codigo";
+            string consulta = "UPDATE cliente SET activo = 0 WHERE codigo = @codigo";
             MySqlParameter[] parameter = {
-                new MySqlParameter("@codigo", comboBoxEliminarProducto.Text)
+                new MySqlParameter("@codigo", comboBoxEliminarCliente.Text)
             };
             ConnectMySQL.Instance.ExecuteQuery(consulta, parameter);
-            MessageBox.Show("El producto se eliminó con exito");
+            MessageBox.Show("El Cliente se eliminó con exito");
         }
 
         private void EliminarCliente_Load(object sender, EventArgs e)
         {
-            string consultaEliminar = "SELECT codigo FROM producto WHERE activo = 1";
+            string consultaEliminar = "SELECT codigo, nombre FROM cliente WHERE activo = 1";
             DataTable dtEliminar = ConnectMySQL.Instance.SelectQuery(consultaEliminar);
             for (int i = 0; i < dtEliminar.Rows.Count; i++)
             {
-                comboBoxEliminarProducto.Items.Add(dtEliminar.Rows[i]["codigo"]);
+                comboBoxEliminarCliente.Items.Add(dtEliminar.Rows[i]["codigo"]+ " Nombre: "+ dtEliminar.Rows[i]["nombre"]);
+
             }
         }
 
         private void comboBoxEliminarProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string consulta = "SELECT nombre FROM producto WHERE codigo = @codigo";
-            string[] parameter = { "@codigo", comboBoxEliminarProducto.Text };
-            string nombre = ConnectMySQL.Instance.SelectQueryScalar(consulta, parameter);
-            textBoxEliminarProducto.Text = nombre;
-
-            consulta = "SELECT stock, precio FROM producto WHERE codigo = @codigo";
-            string[] parameter2 = { "@codigo", comboBoxEliminarProducto.Text };
+ 
+            string consulta = "SELECT nombre, pais, ciudad, tipo FROM cliente WHERE codigo = @codigo";
+            string[] parameter2 = { "@codigo", comboBoxEliminarCliente.Text };
             DataTable dt = ConnectMySQL.Instance.SelectQuery(consulta, parameter2);
-            dataGridViewProducto.DataSource = dt;
+            dataGridViewCliente.DataSource = dt;
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.AgregarCliente = new System.Windows.Forms.Button();
             this.botonActualizarCliente = new System.Windows.Forms.Button();
+            this.botonEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AgregarCliente
@@ -44,7 +45,7 @@
             // 
             // botonActualizarCliente
             // 
-            this.botonActualizarCliente.Location = new System.Drawing.Point(338, 171);
+            this.botonActualizarCliente.Location = new System.Drawing.Point(309, 171);
             this.botonActualizarCliente.Name = "botonActualizarCliente";
             this.botonActualizarCliente.Size = new System.Drawing.Size(146, 81);
             this.botonActualizarCliente.TabIndex = 1;
@@ -52,11 +53,22 @@
             this.botonActualizarCliente.UseVisualStyleBackColor = true;
             this.botonActualizarCliente.Click += new System.EventHandler(this.botonActualizarCliente_Click);
             // 
+            // botonEliminar
+            // 
+            this.botonEliminar.Location = new System.Drawing.Point(537, 171);
+            this.botonEliminar.Name = "botonEliminar";
+            this.botonEliminar.Size = new System.Drawing.Size(146, 81);
+            this.botonEliminar.TabIndex = 2;
+            this.botonEliminar.Text = "Eliminar Cliente";
+            this.botonEliminar.UseVisualStyleBackColor = true;
+            this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonActualizarCliente);
             this.Controls.Add(this.AgregarCliente);
             this.Name = "Clientes";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button AgregarCliente;
         private System.Windows.Forms.Button botonActualizarCliente;
+        private System.Windows.Forms.Button botonEliminar;
     }
 }

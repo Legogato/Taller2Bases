@@ -34,9 +34,19 @@ namespace Taller2
 
         private void botonVentas_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             Venta venta = new Venta();
 
             venta.Show();
+=======
+            
+        }
+
+        private void botonEstadisticas_Click(object sender, EventArgs e)
+        {
+            Estadisticas estadisticas = new Estadisticas();
+            estadisticas.Show();
+>>>>>>> Stashed changes
         }
     }
 }

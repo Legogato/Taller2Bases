@@ -30,5 +30,11 @@ namespace Taller2
 
             actualizarCiudad.Show();
         }
+
+        private void botonEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarCliente eliminarCLiente = new EliminarCliente();
+            eliminarCLiente.Show();
+        }
     }
 }

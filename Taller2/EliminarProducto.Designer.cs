@@ -42,6 +42,7 @@
             this.dataGridViewProducto.Name = "dataGridViewProducto";
             this.dataGridViewProducto.Size = new System.Drawing.Size(395, 337);
             this.dataGridViewProducto.TabIndex = 0;
+            this.dataGridViewProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducto_CellContentClick);
             // 
             // label1
             // 
@@ -51,6 +52,7 @@
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // BotonEliminarProducto
             // 
@@ -71,6 +73,27 @@
             this.comboBoxEliminarProducto.TabIndex = 3;
             this.comboBoxEliminarProducto.SelectedIndexChanged += new System.EventHandler(this.comboBoxEliminarProducto_SelectedIndexChanged);
             // 
+<<<<<<< Updated upstream
+=======
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(150, 245);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Nombre";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBoxEliminarProducto
+            // 
+            this.textBoxEliminarProducto.Location = new System.Drawing.Point(69, 261);
+            this.textBoxEliminarProducto.Name = "textBoxEliminarProducto";
+            this.textBoxEliminarProducto.Size = new System.Drawing.Size(200, 20);
+            this.textBoxEliminarProducto.TabIndex = 7;
+            this.textBoxEliminarProducto.TextChanged += new System.EventHandler(this.textBoxEliminarProducto_TextChanged);
+            // 
+>>>>>>> Stashed changes
             // EliminarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

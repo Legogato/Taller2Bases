@@ -46,7 +46,28 @@ namespace Taller2
             ConnectMySQL.Instance.ExecuteQuery(consulta, parameter);
             MessageBox.Show("El producto se eliminó con exito");
 
+<<<<<<< Updated upstream
             this.Close();
+=======
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxEliminarProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+>>>>>>> Stashed changes
         }
     }
 }
