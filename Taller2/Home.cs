@@ -20,10 +20,8 @@ namespace Taller2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del segundo formulario
             Password password = new Password("producto");
 
-            // Mostrar el segundo formulario
             password.Show();
         }
 
@@ -31,13 +29,14 @@ namespace Taller2
         {
             Password password = new Password("cliente");
 
-            // Mostrar el segundo formulario
             password.Show();
         }
 
-        private void Home_Load(object sender, EventArgs e)
+        private void botonVentas_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.MaxDate = DateTime.Now;
+            Venta venta = new Venta();
+
+            venta.Show();
         }
     }
 }

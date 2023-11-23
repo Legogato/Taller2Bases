@@ -32,15 +32,16 @@ namespace Taller2
                 new MySqlParameter("@activo", 1)
             };
 
+            if(textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "")
+            {
+                MessageBox.Show("Ingrese un dato valido");
+                return;
+            }
+
             ConnectMySQL.Instance.ExecuteQuery(query, parameters);
             MessageBox.Show("El producto se agrego con exito");
             ConnectMySQL.Instance.CloseConnection();
             this.Close();          
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
     }

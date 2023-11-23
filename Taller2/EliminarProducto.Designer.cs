@@ -30,10 +30,8 @@
         {
             this.dataGridViewProducto = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.BotonEliminarCliente = new System.Windows.Forms.Button();
+            this.BotonEliminarProducto = new System.Windows.Forms.Button();
             this.comboBoxEliminarProducto = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxEliminarProducto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,15 +52,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Codigo";
             // 
-            // BotonEliminarCliente
+            // BotonEliminarProducto
             // 
-            this.BotonEliminarCliente.Location = new System.Drawing.Point(72, 324);
-            this.BotonEliminarCliente.Name = "BotonEliminarCliente";
-            this.BotonEliminarCliente.Size = new System.Drawing.Size(197, 44);
-            this.BotonEliminarCliente.TabIndex = 2;
-            this.BotonEliminarCliente.Text = "Eliminar";
-            this.BotonEliminarCliente.UseVisualStyleBackColor = true;
-            this.BotonEliminarCliente.Click += new System.EventHandler(this.BotonEliminarCliente_Click);
+            this.BotonEliminarProducto.Location = new System.Drawing.Point(72, 328);
+            this.BotonEliminarProducto.Name = "BotonEliminarProducto";
+            this.BotonEliminarProducto.Size = new System.Drawing.Size(197, 44);
+            this.BotonEliminarProducto.TabIndex = 2;
+            this.BotonEliminarProducto.Text = "Eliminar";
+            this.BotonEliminarProducto.UseVisualStyleBackColor = true;
+            this.BotonEliminarProducto.Click += new System.EventHandler(this.BotonEliminarProducto_Click_1);
             // 
             // comboBoxEliminarProducto
             // 
@@ -73,31 +71,13 @@
             this.comboBoxEliminarProducto.TabIndex = 3;
             this.comboBoxEliminarProducto.SelectedIndexChanged += new System.EventHandler(this.comboBoxEliminarProducto_SelectedIndexChanged);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(150, 245);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Nombre";
-            // 
-            // textBoxEliminarProducto
-            // 
-            this.textBoxEliminarProducto.Location = new System.Drawing.Point(69, 261);
-            this.textBoxEliminarProducto.Name = "textBoxEliminarProducto";
-            this.textBoxEliminarProducto.Size = new System.Drawing.Size(200, 20);
-            this.textBoxEliminarProducto.TabIndex = 7;
-            // 
             // EliminarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBoxEliminarProducto);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxEliminarProducto);
-            this.Controls.Add(this.BotonEliminarCliente);
+            this.Controls.Add(this.BotonEliminarProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewProducto);
             this.Name = "EliminarProducto";
@@ -113,9 +93,7 @@
 
         private System.Windows.Forms.DataGridView dataGridViewProducto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BotonEliminarCliente;
+        private System.Windows.Forms.Button BotonEliminarProducto;
         private System.Windows.Forms.ComboBox comboBoxEliminarProducto;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxEliminarProducto;
     }
 }

@@ -32,7 +32,6 @@
             this.BotonClientes = new System.Windows.Forms.Button();
             this.botonVentas = new System.Windows.Forms.Button();
             this.botonEstadisticas = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // botonProductos
@@ -63,6 +62,7 @@
             this.botonVentas.TabIndex = 2;
             this.botonVentas.Text = "Ventas";
             this.botonVentas.UseVisualStyleBackColor = true;
+            this.botonVentas.Click += new System.EventHandler(this.botonVentas_Click);
             // 
             // botonEstadisticas
             // 
@@ -73,26 +73,17 @@
             this.botonEstadisticas.Text = "Estadisticas";
             this.botonEstadisticas.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(466, 173);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.botonEstadisticas);
             this.Controls.Add(this.botonVentas);
             this.Controls.Add(this.BotonClientes);
             this.Controls.Add(this.botonProductos);
             this.Name = "Home";
             this.Text = "Home";
-            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
 
         }
@@ -103,6 +94,5 @@
         private System.Windows.Forms.Button BotonClientes;
         private System.Windows.Forms.Button botonVentas;
         private System.Windows.Forms.Button botonEstadisticas;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

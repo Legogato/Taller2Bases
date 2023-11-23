@@ -32,6 +32,12 @@ namespace Taller2
                 new MySqlParameter("@activo", 1)
             };
 
+            if (ciudadText.Text == "" || nombreText.Text == "" || paisText.Text == "")
+            {
+                MessageBox.Show("Ingrese un dato valido");
+                return;
+            }
+
             ConnectMySQL.Instance.ExecuteQuery(query, parameters);
             MessageBox.Show("El Cliente se agrego con exito");
         }
