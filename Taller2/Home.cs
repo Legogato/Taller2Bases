@@ -34,5 +34,10 @@ namespace Taller2
             // Mostrar el segundo formulario
             password.Show();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            dateTimePicker1.MaxDate = DateTime.Now;
+        }
     }
 }
