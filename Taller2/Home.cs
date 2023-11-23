@@ -21,17 +21,18 @@ namespace Taller2
         private void button1_Click(object sender, EventArgs e)
         {
             // Crear una instancia del segundo formulario
-            Productos productos = new Productos();
+            Password password = new Password("producto");
 
             // Mostrar el segundo formulario
-            productos.Show();
+            password.Show();
         }
 
         private void BotonClientes_Click(object sender, EventArgs e)
         {
-             Clientes clientes = new Clientes();
+            Password password = new Password("cliente");
 
-            clientes.Show();
+            // Mostrar el segundo formulario
+            password.Show();
         }
     }
 }

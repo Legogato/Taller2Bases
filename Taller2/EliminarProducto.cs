@@ -24,7 +24,7 @@ namespace Taller2
             DataTable dtEliminar = ConnectMySQL.Instance.SelectQuery(consultaEliminar);
             for (int i = 0; i < dtEliminar.Rows.Count; i++)
             {
-                comboBoxEliminarProducto.Items.Add(dtEliminar.Rows[1]["codigo"]);
+                comboBoxEliminarProducto.Items.Add(dtEliminar.Rows[i]["codigo"]);
             }
         }
         private void comboBoxEliminarProducto_SelectedIndexChanged(object sender, EventArgs e)
