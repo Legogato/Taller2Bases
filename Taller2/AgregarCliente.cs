@@ -22,21 +22,41 @@ namespace Taller2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Verificar nombre del Cliente y ciudad
+            if (int.TryParse(nombreText.Text, out int nombre) || string.IsNullOrWhiteSpace(nombreText.Text) ||
+                int.TryParse(ciudadText.Text, out int ciudad) || string.IsNullOrWhiteSpace(ciudadText.Text))
+            {
+                MessageBox.Show("Verifique que el nombre y la ciudad estén correctos");
+                return;
+            }
+            //Verificar pais si es extranjero y codigo si es nacional
+            if (checkBox1.Checked)
+            {
+                if (int.TryParse(paisText.Text, out int pais) || string.IsNullOrWhiteSpace(paisText.Text))
+                {
+                    MessageBox.Show("Verifique que el pais esté correcto");
+                    return;
+                }
+            }
+            else
+            {
+                if (!int.TryParse(codigoText.Text, out int codigo))
+                {
+                    MessageBox.Show("Ingrese valores numericos para el codigo");
+                    return;
+                }
+            }
+
             string query = "INSERT INTO Cliente(ciudad, nombre, pais, tipo, activo) VALUES (@ciudad, @nombre, @pais, @tipo, @activo);";
             MySqlParameter[] parameters =
             {
                 new MySqlParameter("@ciudad", ciudadText.Text),
                 new MySqlParameter("@nombre", nombreText.Text),
-                new MySqlParameter("@pais", paisText.Text),
+                new MySqlParameter("@pais", VerficarPais()),
                 new MySqlParameter("@tipo", VerificarNacionalidad()),
                 new MySqlParameter("@activo", 1)
             };
 
-            if (ciudadText.Text == "" || nombreText.Text == "" || paisText.Text == "")
-            {
-                MessageBox.Show("Ingrese un dato valido");
-                return;
-            }
 
             ConnectMySQL.Instance.ExecuteQuery(query, parameters);
             MessageBox.Show("El Cliente se agrego con exito");
@@ -57,6 +77,15 @@ namespace Taller2
                 return "Extranjero";
             }
             return "Nacional";
+        }
+
+        private string VerficarPais()
+        {
+            if (checkBox1.Checked == true)
+            {
+                return paisText.Text;
+            }
+            return "Chile";
         }
 
         private void label3_Click(object sender, EventArgs e)

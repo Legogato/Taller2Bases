@@ -72,10 +72,9 @@
             this.botonEstadisticas.TabIndex = 3;
             this.botonEstadisticas.Text = "Estadisticas";
             this.botonEstadisticas.UseVisualStyleBackColor = true;
-<<<<<<< Updated upstream
-=======
+
             this.botonEstadisticas.Click += new System.EventHandler(this.botonEstadisticas_Click);
->>>>>>> Stashed changes
+
             // 
             // Home
             // 

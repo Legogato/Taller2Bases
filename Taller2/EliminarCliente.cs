@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Taller2
 {
@@ -20,6 +21,11 @@ namespace Taller2
 
         private void BotonEliminarCliente_Click(object sender, EventArgs e)
         {
+            if (comboBoxEliminarCliente.Text == "")
+            {
+                MessageBox.Show("Seleccione un cliente");
+                return;
+            }
             string consulta = "UPDATE cliente SET activo = 0 WHERE codigo = @codigo";
             MySqlParameter[] parameter = {
                 new MySqlParameter("@codigo", comboBoxEliminarCliente.Text)
@@ -34,7 +40,7 @@ namespace Taller2
             DataTable dtEliminar = ConnectMySQL.Instance.SelectQuery(consultaEliminar);
             for (int i = 0; i < dtEliminar.Rows.Count; i++)
             {
-                comboBoxEliminarCliente.Items.Add(dtEliminar.Rows[i]["codigo"]+ " Nombre: "+ dtEliminar.Rows[i]["nombre"]);
+                comboBoxEliminarCliente.Items.Add(dtEliminar.Rows[i]["codigo"]);
 
             }
         }

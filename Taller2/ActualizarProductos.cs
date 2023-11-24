@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Taller2
 {
@@ -51,7 +52,16 @@ namespace Taller2
 
         private void botonActualizar_Click(object sender, EventArgs e)
         {
-
+            if (comboBox1.Text == "" )
+            {
+                MessageBox.Show("Seleccione un producto");
+                return;
+            }
+            if (!int.TryParse(textBoxPrecio.Text, out int resultado))
+            {
+                MessageBox.Show("Ingrese un precio valido");
+                return;
+            }
             string consulta = "UPDATE producto SET precio = @nuevoPrecio WHERE codigo = @Codigo";
             MySqlParameter[] parameters =
             {
@@ -60,7 +70,7 @@ namespace Taller2
             };
 
             ConnectMySQL.Instance.ExecuteQuery(consulta, parameters);
-            MessageBox.Show("El precio se acutalizó con exito");
+            MessageBox.Show("El precio se actualizó con exito");
 
         }
     }

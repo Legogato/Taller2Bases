@@ -51,6 +51,16 @@ namespace Taller2
 
         private void botonActualizarCiudad_Click(object sender, EventArgs e)
         {
+            if (comboBoxActualizarCiudad.Text == "")
+            {
+                MessageBox.Show("Seleccione un cliente");
+                return;
+            }
+            if (int.TryParse(textBoxCiudad.Text, out int ciudad) || string.IsNullOrWhiteSpace(textBoxCiudad.Text))
+            {
+                MessageBox.Show("Ingrese una ciudad valida");
+                return;
+            }
             string consulta = "UPDATE cliente SET ciudad = @nuevaCiudad WHERE codigo = @Codigo";
             MySqlParameter[] parameters =
             {
@@ -59,7 +69,7 @@ namespace Taller2
             };
 
             ConnectMySQL.Instance.ExecuteQuery(consulta, parameters);
-            MessageBox.Show("La ciudad se acutalizó con exito");
+            MessageBox.Show("La ciudad se actualizó con exito");
         }
     }
 }

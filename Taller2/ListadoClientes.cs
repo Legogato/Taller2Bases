@@ -19,15 +19,15 @@ namespace Taller2
 
         private void ListadoClientes_Load(object sender, EventArgs e)
         {
-            string consulta1 = "SELECT codigo ,nombre, pais, ciudad, tipo FROM cliente WHERE tipo = \"Extranjero\"";
+            string consulta1 = "SELECT codigo ,nombre, pais, ciudad, tipo FROM cliente WHERE tipo = \"Extranjero\" and activo = 1";
             DataTable dt1 = ConnectMySQL.Instance.SelectQuery(consulta1);
             dataGridViewExtranjeros.DataSource = dt1;
 
-            string consulta2 = "SELECT codigo ,nombre, pais, ciudad, tipo FROM cliente WHERE tipo = \"Nacional\"";
+            string consulta2 = "SELECT codigo ,nombre, pais, ciudad, tipo FROM cliente WHERE tipo = \"Nacional\"and activo = 1";
             DataTable dt2 = ConnectMySQL.Instance.SelectQuery(consulta2);
             dataGridViewNacionales.DataSource = dt2;
 
-            string consulta3 = "SELECT codigo ,nombre, pais, ciudad, tipo FROM cliente";
+            string consulta3 = "SELECT codigo ,nombre, pais, ciudad, tipo FROM cliente WHERE activo = 1";
             DataTable dt3 = ConnectMySQL.Instance.SelectQuery(consulta3);
             dataGridViewTodos.DataSource = dt3;
         }
