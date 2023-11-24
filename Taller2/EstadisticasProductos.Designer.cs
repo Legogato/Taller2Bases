@@ -119,6 +119,7 @@
             this.textBoxNacional.Name = "textBoxNacional";
             this.textBoxNacional.Size = new System.Drawing.Size(100, 20);
             this.textBoxNacional.TabIndex = 8;
+            this.textBoxNacional.TextChanged += new System.EventHandler(this.textBoxNacional_TextChanged);
             // 
             // textBoxExtranjero
             // 

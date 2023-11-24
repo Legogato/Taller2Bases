@@ -31,7 +31,7 @@ namespace Taller2
         }
         private void comboBoxEliminarProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-   
+
             string consulta = "SELECT nombre, precio, stock FROM producto WHERE codigo = @codigo";
             string[] parameter2 = { "@codigo", comboBoxEliminarProducto.Text };
             DataTable dt = ConnectMySQL.Instance.SelectQuery(consulta, parameter2);
@@ -53,10 +53,10 @@ namespace Taller2
             ConnectMySQL.Instance.ExecuteQuery(consulta, parameter);
             MessageBox.Show("El producto se eliminó con exito");
 
+
             ConnectMySQL.Instance.CloseConnection();
+
             this.Close();
-
-
 
         }
     }

@@ -50,5 +50,10 @@ namespace Taller2
             textBoxExtranjero.Text = "3";
             textBoxNacional.Text = "3";
         }
+
+        private void textBoxNacional_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

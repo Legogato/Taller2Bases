@@ -34,9 +34,11 @@ namespace Taller2
 
         private void botonVentas_Click(object sender, EventArgs e)
         {
+
             Venta venta = new Venta();
 
             venta.Show();
+
 
             
         }
@@ -45,6 +47,7 @@ namespace Taller2
         {
             Estadisticas estadisticas = new Estadisticas();
             estadisticas.Show();
+
         }
     }
 }
