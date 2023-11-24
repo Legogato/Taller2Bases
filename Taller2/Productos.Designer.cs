@@ -45,7 +45,7 @@
             // 
             // botonActualizar
             // 
-            this.botonActualizar.Location = new System.Drawing.Point(321, 172);
+            this.botonActualizar.Location = new System.Drawing.Point(299, 172);
             this.botonActualizar.Name = "botonActualizar";
             this.botonActualizar.Size = new System.Drawing.Size(174, 85);
             this.botonActualizar.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(582, 172);
+            this.botonEliminar.Location = new System.Drawing.Point(569, 172);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(174, 85);
             this.botonEliminar.TabIndex = 2;

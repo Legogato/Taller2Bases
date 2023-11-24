@@ -71,6 +71,41 @@ namespace Taller2
 
             ConnectMySQL.Instance.ExecuteQuery(consulta, parameters);
             MessageBox.Show("El precio se actualizó con exito");
+            this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stockText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxStock_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textoNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

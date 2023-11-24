@@ -60,6 +60,7 @@ namespace Taller2
 
             ConnectMySQL.Instance.ExecuteQuery(query, parameters);
             MessageBox.Show("El Cliente se agrego con exito");
+            this.Close();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

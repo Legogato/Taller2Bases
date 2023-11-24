@@ -32,6 +32,7 @@
             this.BotonClientes = new System.Windows.Forms.Button();
             this.botonVentas = new System.Windows.Forms.Button();
             this.botonEstadisticas = new System.Windows.Forms.Button();
+            this.botonCambiarStock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonProductos
@@ -72,15 +73,24 @@
             this.botonEstadisticas.TabIndex = 3;
             this.botonEstadisticas.Text = "Estadisticas";
             this.botonEstadisticas.UseVisualStyleBackColor = true;
-
             this.botonEstadisticas.Click += new System.EventHandler(this.botonEstadisticas_Click);
-
+            // 
+            // botonCambiarStock
+            // 
+            this.botonCambiarStock.Location = new System.Drawing.Point(565, 186);
+            this.botonCambiarStock.Name = "botonCambiarStock";
+            this.botonCambiarStock.Size = new System.Drawing.Size(177, 80);
+            this.botonCambiarStock.TabIndex = 4;
+            this.botonCambiarStock.Text = "Cambiar Stock de un producto";
+            this.botonCambiarStock.UseVisualStyleBackColor = true;
+            this.botonCambiarStock.Click += new System.EventHandler(this.botonCambiarStock_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonCambiarStock);
             this.Controls.Add(this.botonEstadisticas);
             this.Controls.Add(this.botonVentas);
             this.Controls.Add(this.BotonClientes);
@@ -97,5 +107,6 @@
         private System.Windows.Forms.Button BotonClientes;
         private System.Windows.Forms.Button botonVentas;
         private System.Windows.Forms.Button botonEstadisticas;
+        private System.Windows.Forms.Button botonCambiarStock;
     }
 }

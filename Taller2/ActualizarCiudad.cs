@@ -70,6 +70,7 @@ namespace Taller2
 
             ConnectMySQL.Instance.ExecuteQuery(consulta, parameters);
             MessageBox.Show("La ciudad se actualizó con exito");
+            this.Close();
         }
     }
 }

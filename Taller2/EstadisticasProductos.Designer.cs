@@ -46,7 +46,7 @@
             // dataGridViewActuales
             // 
             this.dataGridViewActuales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewActuales.Location = new System.Drawing.Point(184, 31);
+            this.dataGridViewActuales.Location = new System.Drawing.Point(194, 24);
             this.dataGridViewActuales.Name = "dataGridViewActuales";
             this.dataGridViewActuales.Size = new System.Drawing.Size(447, 150);
             this.dataGridViewActuales.TabIndex = 0;
@@ -54,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 88);
+            this.label1.Location = new System.Drawing.Point(71, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 1;
@@ -63,16 +63,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 268);
+            this.label2.Location = new System.Drawing.Point(-1, 269);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.Size = new System.Drawing.Size(195, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Ventas nacionales";
+            this.label2.Text = "Ventas nacionales de los ultimos 2 años";
             // 
             // dataGridViewNacionales
             // 
             this.dataGridViewNacionales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNacionales.Location = new System.Drawing.Point(184, 200);
+            this.dataGridViewNacionales.Location = new System.Drawing.Point(194, 200);
             this.dataGridViewNacionales.Name = "dataGridViewNacionales";
             this.dataGridViewNacionales.Size = new System.Drawing.Size(447, 150);
             this.dataGridViewNacionales.TabIndex = 2;
@@ -80,16 +80,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 459);
+            this.label3.Location = new System.Drawing.Point(-1, 451);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.Size = new System.Drawing.Size(190, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Ventas extranjero";
+            this.label3.Text = "Ventas extranjero de los ultimos 5 años";
             // 
             // dataGridViewExtranjeros
             // 
             this.dataGridViewExtranjeros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExtranjeros.Location = new System.Drawing.Point(184, 372);
+            this.dataGridViewExtranjeros.Location = new System.Drawing.Point(194, 372);
             this.dataGridViewExtranjeros.Name = "dataGridViewExtranjeros";
             this.dataGridViewExtranjeros.Size = new System.Drawing.Size(447, 150);
             this.dataGridViewExtranjeros.TabIndex = 4;
@@ -97,7 +97,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(664, 62);
+            this.label4.Location = new System.Drawing.Point(677, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(252, 13);
             this.label4.TabIndex = 6;
@@ -106,7 +106,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(637, 188);
+            this.label5.Location = new System.Drawing.Point(647, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(305, 13);
             this.label5.TabIndex = 7;

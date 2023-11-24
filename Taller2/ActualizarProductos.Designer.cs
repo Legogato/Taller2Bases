@@ -55,6 +55,7 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(121, 20);
             this.textBoxNombre.TabIndex = 2;
+            this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             // 
             // textoNombre
             // 
@@ -64,6 +65,7 @@
             this.textoNombre.Size = new System.Drawing.Size(44, 13);
             this.textoNombre.TabIndex = 3;
             this.textoNombre.Text = "Nombre";
+            this.textoNombre.Click += new System.EventHandler(this.textoNombre_Click);
             // 
             // stockText
             // 
@@ -73,6 +75,7 @@
             this.stockText.Size = new System.Drawing.Size(35, 13);
             this.stockText.TabIndex = 5;
             this.stockText.Text = "Stock";
+            this.stockText.Click += new System.EventHandler(this.stockText_Click);
             // 
             // textBoxStock
             // 
@@ -81,6 +84,7 @@
             this.textBoxStock.Name = "textBoxStock";
             this.textBoxStock.Size = new System.Drawing.Size(121, 20);
             this.textBoxStock.TabIndex = 4;
+            this.textBoxStock.TextChanged += new System.EventHandler(this.textBoxStock_TextChanged);
             // 
             // textBoxPrecio
             // 
@@ -88,6 +92,7 @@
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(121, 20);
             this.textBoxPrecio.TabIndex = 6;
+            this.textBoxPrecio.TextChanged += new System.EventHandler(this.textBoxPrecio_TextChanged);
             // 
             // label1
             // 
@@ -97,6 +102,7 @@
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Precio";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -106,6 +112,7 @@
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Seleccionar";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // botonActualizar
             // 

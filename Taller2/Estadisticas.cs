@@ -28,5 +28,11 @@ namespace Taller2
             EstadisticasProductos estadisticasProductos = new EstadisticasProductos();
             estadisticasProductos.Show();
         }
+
+        private void botonVentas_Click(object sender, EventArgs e)
+        {
+            MostrarVentas mostrarVentas = new MostrarVentas();  
+            mostrarVentas.Show();
+        }
     }
 }

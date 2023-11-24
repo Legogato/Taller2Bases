@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Taller2
 {
@@ -23,7 +24,10 @@ namespace Taller2
 
         private void Venta_Load(object sender, EventArgs e)
         {
+
+           
             dateTimePicker1.MaxDate = System.DateTime.Now;
+            
 
             //Busca el cliente
 
@@ -48,9 +52,17 @@ namespace Taller2
 
         private void botonVenta_Click(object sender, EventArgs e)
         {
-
-            numericUpDownCantidad.Maximum = this.stock;
-
+            if (comboBoxNombreCliente.Text == "" || comboBoxProductoVenta.Text == "")
+            {
+                MessageBox.Show("Seleccione un cliente y una venta");
+                return;
+            }
+            if (numericUpDownCantidad.Value == 0)
+            {
+                MessageBox.Show("Seleccione una cantidad mayor a 0");
+                return;
+            }
+       
             //ingresa la venta
 
             string query = "INSERT INTO Venta (Fecha, CodigoCliente, MontoTotal) VALUES (@fecha, @CodigoCliente, @Montototal);";
@@ -64,6 +76,22 @@ namespace Taller2
             ConnectMySQL.Instance.ExecuteQuery(query, parameters);
             MessageBox.Show("La venta se agregó con exito");
 
+            //actializar stock
+            string consultaStock = "UPDATE producto SET stock = @nuevoStock WHERE codigo = @Codigo";
+            MySqlParameter[] parametersStock =
+            {
+                new MySqlParameter("@nuevoStock", stock-numericUpDownCantidad.Value),
+                new MySqlParameter("@Codigo", comboBoxProductoVenta.Text)
+            };
+            ConnectMySQL.Instance.ExecuteQuery(consultaStock, parametersStock);
+            if((stock - numericUpDownCantidad.Value) <= 0)
+            {
+                string consulta = "UPDATE producto SET activo = 0 WHERE codigo = @codigo";
+                MySqlParameter[] parameter = {
+                new MySqlParameter("@codigo", comboBoxProductoVenta.Text)
+            };
+                ConnectMySQL.Instance.ExecuteQuery(consulta, parameter);
+            }
             //Consulta para obtener la ID
 
             string consultaID = "SELECT LAST_INSERT_ID()+1 AS IDVenta";
@@ -82,12 +110,16 @@ namespace Taller2
             };
 
             ConnectMySQL.Instance.ExecuteQuery(query2, parameters2);
+            ConnectMySQL.Instance.CloseConnection();
+            this.Close();
+
+
         }
 
         private void comboBoxProductoVenta_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Consigue el stock y el precio
-
+            
             string consulta = "SELECT stock, precio FROM producto WHERE codigo = @Codigo";
             string[] parametros = { "@Codigo", comboBoxProductoVenta.Text };
 
@@ -100,7 +132,7 @@ namespace Taller2
 
             setPrecio(precio);
             setStock(stock);
-            
+            numericUpDownCantidad.Maximum = this.stock;
         }
 
         private void setPrecio(int precio)
@@ -124,6 +156,36 @@ namespace Taller2
             DataTable resultados2 = ConnectMySQL.Instance.SelectQuery(consulta2, parametros2);
 
             string codigoCliente = resultados2.Rows[0]["codigo"].ToString();
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDownCantidad_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

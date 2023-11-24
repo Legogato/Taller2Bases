@@ -30,11 +30,12 @@
         {
             this.botonListaClientes = new System.Windows.Forms.Button();
             this.botonListadoProductos = new System.Windows.Forms.Button();
+            this.botonVentas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonListaClientes
             // 
-            this.botonListaClientes.Location = new System.Drawing.Point(209, 194);
+            this.botonListaClientes.Location = new System.Drawing.Point(141, 194);
             this.botonListaClientes.Name = "botonListaClientes";
             this.botonListaClientes.Size = new System.Drawing.Size(130, 55);
             this.botonListaClientes.TabIndex = 0;
@@ -44,7 +45,7 @@
             // 
             // botonListadoProductos
             // 
-            this.botonListadoProductos.Location = new System.Drawing.Point(461, 194);
+            this.botonListadoProductos.Location = new System.Drawing.Point(333, 194);
             this.botonListadoProductos.Name = "botonListadoProductos";
             this.botonListadoProductos.Size = new System.Drawing.Size(130, 55);
             this.botonListadoProductos.TabIndex = 1;
@@ -52,11 +53,22 @@
             this.botonListadoProductos.UseVisualStyleBackColor = true;
             this.botonListadoProductos.Click += new System.EventHandler(this.botonListadoProductos_Click);
             // 
+            // botonVentas
+            // 
+            this.botonVentas.Location = new System.Drawing.Point(536, 194);
+            this.botonVentas.Name = "botonVentas";
+            this.botonVentas.Size = new System.Drawing.Size(130, 55);
+            this.botonVentas.TabIndex = 2;
+            this.botonVentas.Text = "Ver ventas";
+            this.botonVentas.UseVisualStyleBackColor = true;
+            this.botonVentas.Click += new System.EventHandler(this.botonVentas_Click);
+            // 
             // Estadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botonVentas);
             this.Controls.Add(this.botonListadoProductos);
             this.Controls.Add(this.botonListaClientes);
             this.Name = "Estadisticas";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button botonListaClientes;
         private System.Windows.Forms.Button botonListadoProductos;
+        private System.Windows.Forms.Button botonVentas;
     }
 }

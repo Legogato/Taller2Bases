@@ -49,5 +49,11 @@ namespace Taller2
             estadisticas.Show();
 
         }
+
+        private void botonCambiarStock_Click(object sender, EventArgs e)
+        {
+            CambiarStockProducto cambiarStockProducto = new CambiarStockProducto();
+            cambiarStockProducto.Show();    
+        }
     }
 }

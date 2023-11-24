@@ -32,6 +32,7 @@ namespace Taller2
             };
             ConnectMySQL.Instance.ExecuteQuery(consulta, parameter);
             MessageBox.Show("El Cliente se eliminó con exito");
+            this.Close();
         }
 
         private void EliminarCliente_Load(object sender, EventArgs e)

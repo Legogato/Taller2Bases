@@ -66,6 +66,7 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Cliente";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -75,6 +76,7 @@
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Producto";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // numericUpDownCantidad
             // 
@@ -82,6 +84,7 @@
             this.numericUpDownCantidad.Name = "numericUpDownCantidad";
             this.numericUpDownCantidad.Size = new System.Drawing.Size(200, 20);
             this.numericUpDownCantidad.TabIndex = 4;
+            this.numericUpDownCantidad.ValueChanged += new System.EventHandler(this.numericUpDownCantidad_ValueChanged);
             // 
             // label3
             // 
@@ -91,6 +94,7 @@
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Cantidad";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dateTimePicker1
             // 
@@ -98,6 +102,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label4
             // 
@@ -107,6 +112,7 @@
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Fecha";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // botonVenta
             // 
